@@ -1,16 +1,17 @@
 import express from 'express';
 import { env } from 'process';
+import cors from 'cors';
 
 //Inicial balance
 let currentBalance:number = 0;
 let transHistory: Object [] = [];
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const endpoint: string = "/v1";
 
-
 app.use(express.json());
+app.use(cors());
 
 app.get(endpoint + '/balance', (req, res) => {
     res.json({currentBalance})
