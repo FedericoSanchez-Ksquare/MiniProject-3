@@ -1,8 +1,8 @@
 # MiniProject-3
 
-| User Stories     | John | Jane |
+| User Stories     | Federico | Braulio |
 | ---------------- | :--: | ---: |
-| 1 The API must have the following endpoint: 'v1/balance' that will  return the current balance in the application |     |      |
+| 1 The API must have the following endpoint: 'v1/balance' that will  return the current balance in the application |   x  |      |
 | 2 The API must have the following endpoint: 'v1/transact\ion' that will add a new transaction to the balance history |      |     |
 | 3 The endpoint 'v1/transaction' must be aware of what kind of amount is given to it and how it affects the balance, if the number is positive the amount should be added to the balance but if negative it should subtract from it |     |      |
 | 4 The API must keep a history of both the balance changes and the transactions inside a data structure and all of it should be lost after a restart |     |      |
