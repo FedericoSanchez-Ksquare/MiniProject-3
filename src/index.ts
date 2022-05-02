@@ -30,9 +30,16 @@ app.post(endpoint + '/transaction', (req, res) => {
         console.log(newBalance, description);
         console.log(transHistory);
         res.send("Transaction processed correctly");
-  }  
+  }
   });
 
+  app.post(endpoint + '/clear', (req, res) => {
+    currentBalance = 0;
+    transHistory = [];
+    console.log(currentBalance);
+    console.log(transHistory);
+    res.send('All was reset correctly');
+  });
 
 app.listen(PORT, () => {
     console.log('The application is listening on port', PORT);
