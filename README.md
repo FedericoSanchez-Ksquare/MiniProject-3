@@ -9,6 +9,6 @@
 | 5  The API must have the following endpoint: 'v1/clear' that upon calling it should set the balance to 0 and remove any transaction from the Data Structure that stored them|      |   x  |
 | 6 The app must have an element that will show the current balance' |  x  |      |
 | 7 The app must have a clickable element that will fetch the balance from the API and show the new value if possible |     |      |
-| 8 The app must have a form element that will have the following fields 'Description' of type text and 'Amount' of type number |      |     |
+| 8 The app must have a form element that will have the following fields 'Description' of type text and 'Amount' of type number |   x   |     |
 | 9 The app must have a label that explains to the user what the difference between positive and negative numbers is |     |      |
 | 10  The app must have a clickable element that will send the Transaction form to the API and update the balance afterward |     |      |
