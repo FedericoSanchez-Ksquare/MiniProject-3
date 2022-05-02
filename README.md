@@ -11,4 +11,4 @@
 | 7 The app must have a clickable element that will fetch the balance from the API and show the new value if possible |     |      |
 | 8 The app must have a form element that will have the following fields 'Description' of type text and 'Amount' of type number |   x   |     |
 | 9 The app must have a label that explains to the user what the difference between positive and negative numbers is |     |      |
-| 10  The app must have a clickable element that will send the Transaction form to the API and update the balance afterward |     |      |
+| 10  The app must have a clickable element that will send the Transaction form to the API and update the balance afterward |  x   |      |
