@@ -19,11 +19,18 @@ app.post(endpoint + '/transaction', (req, res) => {
     let newBalance = 0;
     newBalance = req.body.balance;
     description = req.body.description;
-    const objTransHistory = { newBalance, description };
-    transHistory.push(objTransHistory);
-    console.log(newBalance, description);
-    console.log(transHistory);
-    res.send("Transaction processed correctly");
+    currentBalance += newBalance;
+    if (currentBalance < 0) {
+        currentBalance -= newBalance;
+        res.send("Transaction failed: insufficient funds");
+    }
+    else {
+        const objTransHistory = { newBalance, description };
+        transHistory.push(objTransHistory);
+        console.log(newBalance, description);
+        console.log(transHistory);
+        res.send("Transaction processed correctly");
+    }
 });
 app.listen(PORT, () => {
     console.log('The application is listening on port', PORT);
