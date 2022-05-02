@@ -6,7 +6,7 @@ import cors from 'cors';
 let currentBalance:number = 0;
 let transHistory: Object [] = [];
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const endpoint: string = "/v1";
 

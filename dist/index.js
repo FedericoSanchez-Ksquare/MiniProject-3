@@ -8,7 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 //Inicial balance
 let currentBalance = 0;
 let transHistory = [];
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const app = (0, express_1.default)();
 const endpoint = "/v1";
 app.use(express_1.default.json());
