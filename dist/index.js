@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 //Inicial balance
 let currentBalance = 0;
+let transHistory = [];
 const PORT = 3000;
 const app = (0, express_1.default)();
 const endpoint = "/v1";
@@ -18,7 +19,10 @@ app.post(endpoint + '/transaction', (req, res) => {
     let newBalance = 0;
     newBalance = req.body.balance;
     description = req.body.description;
-    currentBalance += newBalance;
+    const objTransHistory = { newBalance, description };
+    transHistory.push(objTransHistory);
+    console.log(newBalance, description);
+    console.log(transHistory);
     res.send("Transaction processed correctly");
 });
 app.listen(PORT, () => {
