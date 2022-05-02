@@ -1,10 +1,11 @@
 import express from 'express';
+import { env } from 'process';
 
 //Inicial balance
 let currentBalance:number = 0;
 let transHistory: Object [] = [];
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 const app = express();
 const endpoint: string = "/v1";
 
