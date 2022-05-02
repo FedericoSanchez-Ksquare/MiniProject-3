@@ -19,8 +19,7 @@
   },
   "homepage": "https://github.com/FedericoSanchez-Ksquare/MiniProject-3#readme",
   "dependencies": {
-    "express": "^4.18.1",
-    "node": "^17.7.2"
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

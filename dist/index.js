@@ -13,14 +13,6 @@ app.use(express_1.default.json());
 app.get(endpoint + '/balance', (req, res) => {
     res.json({ currentBalance });
 });
-app.post(endpoint + '/transaction', (req, res) => {
-    let description = "";
-    let newBalance = 0;
-    newBalance = req.body.balance;
-    description = req.body.description;
-    currentBalance += newBalance;
-    res.send("Transaction processed correctly");
-});
 app.listen(PORT, () => {
     console.log('The application is listening on port', PORT);
 });
