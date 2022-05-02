@@ -1,6 +1,6 @@
 let descriptionVal = document.getElementById("description");
 let amountVal = document.getElementById("amount");
-let balance = document.getElementById("balanceShow")
+let balance = document.getElementById("balanceShow");
 
 const getBalance = async () => {
     const url = `http://localhost:3000/v1/balance`;
@@ -23,3 +23,10 @@ const postTransaction = async () => {
         document.getElementById("description").value =""
     }
 }
+
+const clear = async  () =>{
+    const url = `http://localhost:3000/v1/clear`;
+    await fetch(url,{method: 'POST',headers: { 'Content-Type': 'application/json' },})
+}
+
+clear()
