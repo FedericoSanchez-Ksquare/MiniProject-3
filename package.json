@@ -8,6 +8,9 @@
     "start": "node dist/index.js",
     "build": "rm -rf dist && tsc"
   },
+  "engines":{
+    "node": "17.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FedericoSanchez-Ksquare/MiniProject-3.git"
