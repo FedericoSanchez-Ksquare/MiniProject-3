@@ -16,8 +16,7 @@ const postTransaction = async () => {
     const desc = descriptionVal.value
     const val = +amountVal.value
     const url = `https://vast-woodland-97729.herokuapp.com/v1/transaction`;
-    if(desc === "" && val ==="")return;
-    
+    if(desc === "" || val === 0)return;
         await fetch(url,{method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ description: desc, balance: val })})
         document.getElementById("amount").value = ""
         document.getElementById("description").value =""
