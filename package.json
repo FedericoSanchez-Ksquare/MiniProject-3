@@ -24,7 +24,6 @@
   "homepage": "https://github.com/FedericoSanchez-Ksquare/MiniProject-3#readme",
   "dependencies": {
     "@types/cors": "^2.8.12",
-    "cors": "^2.8.5",
     "express": "^4.18.1",
     "node": "^17.7.2"
   },
