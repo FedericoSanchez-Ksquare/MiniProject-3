@@ -1,5 +1,4 @@
 import express from 'express';
-import { env } from 'process';
 import cors from 'cors';
 
 //Inicial balance
@@ -10,8 +9,8 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 const endpoint: string = "/v1";
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 app.get(endpoint + '/balance', (req, res) => {
     res.json({currentBalance})
