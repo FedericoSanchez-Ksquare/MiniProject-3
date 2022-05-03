@@ -1,5 +1,18 @@
 # MiniProject-3
 
+#Participants 
+Braulio Ochoa 
+Federico Sánchez
+
+#backend
+https://vast-woodland-97729.herokuapp.com/
+
+#pages
+https://federicosanchez-ksquare.github.io/MiniProject-3/
+
+
+
+
 | User Stories     | Federico | Braulio |
 | ---------------- | :--: | ---: |
 | 1 The API must have the following endpoint: 'v1/balance' that will  return the current balance in the application |   x  |      |
