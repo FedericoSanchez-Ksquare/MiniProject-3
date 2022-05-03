@@ -9,35 +9,27 @@
 </head>
 
 <body>
-    <div class="general-container">
-        <div class="wrapper">
-            <div class="topContainer">
-
-                <label for="" class="balance">Current Balance</label>
-                <span class="quantity" id="balanceShow">---</span>
-                <div class="buttonSpace">
-                    <button class="btnUpdate" type ="button" onclick="getBalance()">Get Balance</button>
-                </div>
-            </div>
-            <div class="bottomContainer">
-                <form action="" class="flexForm">
-                    <div class="contentSpace">
-                        <div class="innerParent">
-                            <div class="innerContent">
-                                <label for="">Description</label>
-                                <label for="">Amount</label>
-                            </div>
-                            <div class="innerContent">
-                                <textarea type="text" name="" id="description" cols="18" rows="1"></textarea>
-                                <input type="number" name="" id="amount">
-                            </div>
-                        </div>
-                        <div class="buttonSpace">
-                            <button class="btnFetch" type="button" onclick="postTransaction()">Post</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    <div class="container">
+        <div class="both-containers">
+        <div class="balance-container">
+            <h3>Current Balance</h3>
+            <p class="quantity" id="balanceShow">---</p>
+            <button class="btnUpdate" type ="button" onclick="getBalance()">Get Balance</button>
+        </div>
+        <div class="desc-amount-container">
+           <div class="labels-container">
+               <label for="">Input a positive number if you have an ingress</label>
+               <label for="">Input a negative number if you have a loss</label>
+           </div>
+         
+            <form class="form-container" action="">
+                <label for="">Description</label>
+                <textarea class="txt-desc" name="description" id="description"></textarea>
+                <label for="number">Amount</label>
+                <input type="number" id="amount">
+            </form>
+            <button class="btnFetch" type="button" onclick="postTransaction()">Submit</button>
+        </div>
         </div>
     </div>
     <script type = "text/javascript" src="dist/main.js"></script>
