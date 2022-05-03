@@ -1,83 +1,176 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  background-color: #393e41;
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+
+body,html{
+  height: 90vh;
+  background-color: #e7e5df;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.general-container {
+.container {
+  height: 100%;
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  flex-direction: column;
+  background-color: #e7e5df;
+}
+
+.both-containers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
   width: 100%;
+  font-size: 1.5vw;
+  border-radius: 10px;
+  text-align: center;
   height: 100%;
 }
-.wrapper {
+
+.balance-container{
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 70%;
-  color: black;
-}
-.topContainer {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   background-color: #e7bb41;
-  height: 50%;
-  align-items: center;
-  border-radius: 35px 35px 0 0;
+  width: 50%;
+  height: 30%;
+  border-radius: 10px 10px 0 0;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  padding: 10px;
 }
-.bottomContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.desc-amount-container{
   background-color: #44bba4;
-  height: 50%;
-  max-height: 90%;
-  width: auto;
-  border-radius: 0 0 35px 35px;
+  width: 50%;
+  height: auto;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  padding: 10px;
 }
-.contentSpace {
+
+.btnUpdate {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  font-size: 1.3vw;
+  outline-color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #00ACEE;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btnUpdate:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+}
+
+.labels-container{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: #e7e5df;
-  border: 2px solid black;
-  padding: 30px;
-  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
 }
-.innerContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+.form-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.innerParent {
-  display: flex;
-  flex-direction: row;
-  height: 100px;
-  justify-content: space-between;
-}
-.buttonSpace {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-.balance {
-  font-size: 35px;
-}
-.quantity {
-  margin-top: 20px;
-  font-size: 20px;
-}
-button {
-  padding: 7px;
-}
-textarea {
-  height: 60%;
+
+.form-container .txt-desc{
+  height: 60px;
+  width: 230px;
   resize: none;
+  border-radius: 5px;
 }
+
+.form-container input{
+  width: 230px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+textarea:focus, input:focus{
+    outline-color: rgba(0,0,0,0.5);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btnUpdate:hover{
+  background-color: #44bba4;
+
+}
+.btnFetch {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  font-size: 1.3vw;
+  outline-color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #e9b21d;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btnFetch:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+}
+
+
+
+
+
+
+
+
